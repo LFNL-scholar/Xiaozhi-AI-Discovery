@@ -9,8 +9,8 @@
 class SystemInfo {
 public:
     static size_t GetFlashSize();
-    static size_t GetMinimumFreeHeapSize();
-    static size_t GetFreeHeapSize();
+    static size_t GetMinimumFreeHeapSize(); // 堆内存的最小空闲大小
+    static size_t GetFreeHeapSize();    // 当前堆内存的空闲大小
     static std::string GetMacAddress();
     static std::string GetChipModelName();
     static esp_err_t PrintRealTimeStats(TickType_t xTicksToWait);

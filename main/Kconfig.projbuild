@@ -2,7 +2,7 @@ menu "Xiaozhi Assistant"
 
 config OTA_VERSION_URL
     string "OTA Version URL"
-    default "https://api.tenclass.net/xiaozhi/ota/"
+    default "https://14.103.205.68:4000"
     help
         The application will access this URL to check for updates.
 
@@ -38,7 +38,7 @@ endchoice
 config WEBSOCKET_URL
     depends on CONNECTION_TYPE_WEBSOCKET
     string "Websocket URL"
-    default "wss://api.tenclass.net/xiaozhi/v1/"
+    default "ws://14.103.205.68:5001/"
     help
         Communication with the server through websocket after wake up.
 
@@ -148,6 +148,8 @@ choice BOARD_TYPE
         bool "无名科技星智1.54(ML307)"
     config BOARD_TYPE_SENSECAP_WATCHER
         bool "SenseCAP Watcher"
+    config BOARD_TYPE_DOIT_S3_AIBOX
+        bool "四博智联AI陪伴盒子"
 endchoice
 
 choice DISPLAY_OLED_TYPE
